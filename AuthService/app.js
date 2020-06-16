@@ -9,9 +9,9 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
 const passport = require('passport');
-const LocalStratergy = require('passport-local').Stratergy;
+const LocalStrategy = require('passport-local').Strategy
 
-passport.use(new LocalStratergy(
+passport.use(new LocalStrategy(
     async function(username, password, done){
         try {
             //Find user

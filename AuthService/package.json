@@ -4,7 +4,8 @@
   "description": "Simple Authentication service using express and passportjs",
   "main": "server.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "start": "node server.js"
   },
   "author": "Fabian Desnoes",
   "license": "ISC",
@@ -13,6 +14,7 @@
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "node-fetch": "^2.6.0",
-    "passport": "^0.4.1"
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0"
   }
 }
