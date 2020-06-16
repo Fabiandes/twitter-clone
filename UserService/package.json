@@ -1,0 +1,15 @@
+{
+  "name": "user-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest",
+    "start" : "node server.js"
+  },
+  "author": "Fabian Desnoes",
+  "license": "ISC",
+  "dependencies": {
+    "fastify": "^2.14.1"
+  }
+}
