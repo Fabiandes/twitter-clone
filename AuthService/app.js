@@ -1,13 +1,25 @@
 const fetch = require('node-fetch');
 const bcrypt = require('bcrypt');
 
+//Express
 const express = require('express');
 const app = express();
 
+//Body Parser Setup
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
+//Session Setup
+const session = require('express-session');
+app.use(session({ secret: require('./keys').sessionSecret }));
+
+//Other Middleware
+app.use(express.cookieParser());
+app.use(passport.initialize());
+app.use(passport.session());
+
+//Passport Initalization
 const passport = require('passport');
 const LocalStrategy = require('passport-local').Strategy
 
