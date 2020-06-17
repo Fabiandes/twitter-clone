@@ -1,0 +1,21 @@
+version: "3"
+services:
+    mongo:
+        image: mongo
+        environment: 
+            MONGO_INITDB_ROOT_USERNAME: root
+            MONGO_INITDB_ROOT_PASSWORD: example
+    user-service:
+        build: 
+            context: ./
+            dockerfile: Dockerfile
+        depends_on: 
+            - mongo
+        ports:
+            - 6000:80
+        environment: 
+            DB_USERNAME: root
+            DB_PASSWORD: example
+            DB_PORT: 27017
+            DB_HOST: mongo
+            PORT: 80
