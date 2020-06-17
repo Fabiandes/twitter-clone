@@ -5,11 +5,15 @@
   "main": "server.js",
   "scripts": {
     "test": "jest",
-    "start" : "node server.js"
+    "start": "node server.js"
   },
   "author": "Fabian Desnoes",
   "license": "ISC",
   "dependencies": {
-    "fastify": "^2.14.1"
+    "bcrypt": "^5.0.0",
+    "fastify": "^2.14.1",
+    "fastify-formbody": "^3.2.0",
+    "fastify-mongodb": "^2.0.0",
+    "fastify-plugin": "^1.6.1"
   }
 }
